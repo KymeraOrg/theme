@@ -1,0 +1,208 @@
+/*
+THEME NAME: Mega Theme
+THEME URI:
+DESCRIPTION: A theme that works with SiteOrigin's Pagebuilder
+VERSION: 3.0
+AUTHOR: Nathan Hartwell
+For advanced functions, see http://lesscss.org/#overview
+*/
+/*This is the main container of the site, its width should control everything.*/
+/* image aligning for blog posts */
+/*This is to fix the stupid gravity forms name field*/
+* {
+  margin: 0;
+  padding: 0;
+  /* Safari/Chrome, other WebKit */
+  -webkit-box-sizing: border-box !important;
+  /* Firefox, other Gecko */
+  -moz-box-sizing: border-box !important;
+  /* Opera/IE 8+ */
+  box-sizing: border-box !important;
+}
+input {
+  -webkit-appearance: none;
+}
+html {
+  /* Safari/Chrome, other WebKit */
+  -webkit-box-sizing: border-box !important;
+  /* Firefox, other Gecko */
+  -moz-box-sizing: border-box !important;
+  /* Opera/IE 8+ */
+  box-sizing: border-box !important;
+  width: 100%;
+}
+body {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  font-size: 16px;
+  color: #202020;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 0 !important;
+  padding: 0 !important;
+  /* Safari/Chrome, other WebKit */
+  -webkit-box-sizing: border-box !important;
+  /* Firefox, other Gecko */
+  -moz-box-sizing: border-box !important;
+  /* Opera/IE 8+ */
+  box-sizing: border-box !important;
+}
+a {
+  color: #1a899d;
+  text-decoration: none;
+}
+a:hover {
+  color: #074f6a;
+}
+p {
+  padding-bottom: 15px;
+}
+.container {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width:1300px) {
+  .container {
+    width: 100%;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1.5px;
+  font-weight: 100;
+}
+@media screen and (max-width:900px) {
+  .leftalign,
+  .rightalign {
+    float: none;
+    width: 100%;
+    padding: 30px;
+  }
+}
+.leftalign {
+  float: left;
+  width: 30%;
+  height: auto;
+  padding: 20px 20px 20px 0;
+}
+.rightalign {
+  float: right;
+  width: 30%;
+  height: auto;
+  padding: 20px 0 20px 20px;
+}
+.leftalign {
+  width: 50%;
+}
+.leftalign,
+.alignleft {
+  float: left;
+  height: auto;
+  padding: 0 20px 20px 0;
+}
+.rightalign {
+  width: 50%;
+}
+.rightalign,
+.alignright {
+  float: right;
+  height: auto;
+  padding: 5px 0 20px 20px;
+}
+.alignleft,
+.alignright {
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  margin: 0 auto;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+.widget_siteorigin-panels-builder {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+.panel-grid-cell {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+ul,
+ol {
+  padding-left: 30px;
+}
+ul li,
+ol li {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+.page-title h1 {
+  padding: 30px;
+}
+.category_page .editor-tinymce {
+  padding: 0;
+}
+.editor-tinymce {
+  padding: 30px;
+}
+.main-side,
+.main-sidebar {
+  display: block;
+  float: left;
+  /* Safari/Chrome, other WebKit */
+  -webkit-box-sizing: border-box !important;
+  /* Firefox, other Gecko */
+  -moz-box-sizing: border-box !important;
+  /* Opera/IE 8+ */
+  box-sizing: border-box !important;
+}
+@media screen and (max-width:900px) {
+  .main-side,
+  .main-sidebar {
+    width: 100%;
+    float: none;
+  }
+}
+.main-side {
+  width: 70%;
+  padding: 30px;
+}
+.main-sidebar {
+  width: 30%;
+}
+div.ginput_container_name span {
+  padding-right: 0 !important;
+  float: left;
+  margin: 0 !important;
+  width: 49.5% !important;
+}
+div.ginput_container_name span:first-child {
+  margin-right: 1% !important;
+}

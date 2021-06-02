@@ -1,0 +1,221 @@
+/*
+THEME NAME: Mega Theme
+THEME URI:
+DESCRIPTION: A theme that works with SiteOrigin's Pagebuilder
+VERSION: 3.4
+AUTHOR: Nathan Hartwell
+For advanced functions, see http://lesscss.org/#overview
+*/
+
+@width: 1300px;
+@mobile: 900px;
+@main_font = 'Open Sans', sans-serif;
+@desktop_query: ~"screen and (max-width:1300px)";
+@mobile_query: ~"screen and (max-width:900px)";
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box !important;/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box !important;/* Firefox, other Gecko */
+	box-sizing:border-box !important;/* Opera/IE 8+ */
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+html{
+	-webkit-box-sizing: border-box !important;/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box !important;/* Firefox, other Gecko */
+	box-sizing:border-box !important;/* Opera/IE 8+ */
+	width: 100%;
+}
+
+body{
+	position: relative;
+	font-family: @main_font;
+	width: 100%;
+	font-size: 16px;
+	color: rgb(32, 32, 32);
+	line-height: 28px;
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 0 !important;
+	-webkit-box-sizing: border-box !important;/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box !important;/* Firefox, other Gecko */
+	box-sizing:border-box !important;/* Opera/IE 8+ */
+}
+
+a{
+	color: #1a899d;
+	text-decoration: none;
+	&:hover{
+		color: #074f6a;
+	}
+}
+
+p{
+	padding-bottom: 15px;
+}
+
+.container{
+	/*This is the main container of the site, its width should control everything.*/
+	width: @width;
+	margin-left:auto;
+	margin-right:auto;
+	@media @desktop_query{
+    width: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+	letter-spacing: 1.5px;
+	font-weight: 100;
+}
+
+.leftalign, .rightalign{
+	@media @mobile_query{
+		float: none;
+		width: 100%;
+		padding: 30px;
+	}
+}
+
+.leftalign{
+	float: left;
+	width: 30%;
+	height: auto;
+	padding: 20px 20px 20px 0;
+}
+
+.rightalign{
+	float: right;
+	width: 30%;
+	height: auto;
+	padding: 20px 0 20px 20px;
+}
+
+/* image aligning for blog posts */
+.leftalign{
+	width: 50%;
+}
+
+.leftalign, .alignleft{
+	float: left;
+	height: auto;
+	padding: 0 20px 20px 0;
+}
+
+.rightalign{
+	width: 50%;
+}
+
+.rightalign, .alignright{
+	float: right;
+	height: auto;
+	padding: 5px 0 20px 20px;
+}
+
+.alignleft, .alignright{
+	max-width: 100%;
+	height: auto;
+}
+
+.aligncenter{
+	margin: 0 auto;
+	display: block;
+
+}
+
+.clear{
+	clear: both;
+}
+
+.widget_siteorigin-panels-builder{
+	list-style: none !important;
+	padding: 0;
+	margin: 0;
+}
+
+.panel-grid-cell{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+ul, ol{
+	padding-left: 30px;
+}
+
+ul li, ol li{
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.page-title h1{
+	padding: 30px;
+}
+
+.category_page .editor-tinymce{
+	padding: 0;
+}
+
+.editor-tinymce{
+	padding: 30px;
+}
+
+.main-side, .main-sidebar{
+	display: block;
+	float: left;
+	-webkit-box-sizing: border-box !important;/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box !important;/* Firefox, other Gecko */
+	box-sizing:border-box !important;/* Opera/IE 8+ */
+	@media @mobile_query{
+		width: 100%;
+		float: none;
+	}
+}
+
+.main-side{
+	width: 70%;
+	padding: 30px;
+}
+
+.main-sidebar{
+	width: 30%;
+}
+
+div.ginput_container_name {
+	/*This is to fix the stupid gravity forms name field*/
+	span{
+		padding-right: 0 !important;
+		float: left;
+		margin: 0 !important;
+		width: 49.5% !important;
+
+		&:first-child{
+			margin-right: 1% !important;
+		}
+	}
+}
