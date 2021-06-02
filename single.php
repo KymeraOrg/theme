@@ -1,5 +1,6 @@
 <?php get_header() ?>
 
+
 	<div id="container" class="single_post" >
 		<?php include('inc/title.php'); ?>
 		<div id="content" class="<?php echo get_option( 'layout_opt' ); ?>">
