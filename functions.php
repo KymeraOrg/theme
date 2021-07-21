@@ -397,6 +397,30 @@ function pagebuilder_post_class( $classes ) {
 }
 add_filter( 'post_class', 'pagebuilder_post_class' );
 
+
+add_filter( 'gform_validation_message', function ( $message, $form ) {
+    if ( gf_upgrade()->get_submissions_block() ) {
+        return $message;
+    }
+
+    $message = "<div role='alert' aria-live='assertive' class='validation_error'><p aria-live='polite'>There was a problem with your submission. Errors have been highlighted below.</p>";
+    $message .= '<ul>';
+
+    foreach ( $form['fields'] as $field ) {
+
+        if ( $field->failed_validation ) {
+            $message .= sprintf( '<li><a href="#field_'. $form['id'] . "_" . $field->id .'" aria-describedby="#field_'. $form['id'] . "_" . $field->id .'">%s - %s</a></li>', GFCommon::get_label( $field ), $field->validation_message );
+        }
+    }
+
+    $message .= '</ul></div>';
+
+
+    return $message;
+}, 10, 2 );
+
+add_filter( 'gform_confirmation', 'custom_confirmation', 10, 4 );
+
 //Add WooCommerce Support
 add_theme_support( 'woocommerce' );
 
