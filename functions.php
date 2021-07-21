@@ -397,7 +397,6 @@ function pagebuilder_post_class( $classes ) {
 }
 add_filter( 'post_class', 'pagebuilder_post_class' );
 
-
 add_filter( 'gform_validation_message', function ( $message, $form ) {
     if ( gf_upgrade()->get_submissions_block() ) {
         return $message;
